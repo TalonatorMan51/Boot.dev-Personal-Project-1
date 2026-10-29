@@ -1,0 +1,122 @@
+This is the Devlog for the project, it used to be in the README untl Day 2 :)
+
+
+DAY 1:
+This is my first personal projects in my taking of Boot.dev's learn to code backend developer path.
+
+this is my first time doing anything coding related with no guidance, I'm not sure how it'll turn out, but lets hop it works at least.
+I'll use this file to explain what the project IS once I've actually got it done. Until then, it will be my personal sounding board.
+
+So. First I need to decide what I'm going to do. I have a few Ideas, but the goal is to have it done in a 40ish work-hour timeframe. (I'll put 40 hours of work into it)
+
+My Ideas so far:
+1 - A simple clicker game made using pygame:
+ It's something I've had in my head for a long time, but a full game with visual UI and clicking elements, even if small, is a big undertaking that might be longer than 40 hours.
+
+2 - A Text-Based Adventure Game:
+ As suggested by the Boot.dev page where it said "you need to come up with an idea, here's some simple ones to get you thinking" a text based adventure game wouldn't have the extra "make the UI work" challenges the clicker game would have, the problem here is I'd need a good story idea to make it work. I don't want to do just a cliche "hero slays the bad guy" story without a good twist to make it interesting.
+
+3 - Something else related to my current interests:
+ This is vague because I'm not sure what this would be yet, only that I'd want it interseting to me or I won't have any motivation to work on it. I could do something related to the Binding of Isaac, but it coulsn't be a mod because those run on Lua and I only know Python right now. Maybe it would be something Final Fantasy or Monster Hunter related? Not sure what, but I'm sure I could think of something.
+
+I have other plans today so I think I'll let this stew for a day and maybe bounce some ideas off friends and family before deciding.
+
+
+DAY 2:
+Gonna use the README as a log/journal of stuff while I'm working I think... at least until I need the README to do the job of a README...
+then I'll move this all to a devlog file... 
+Or I could save myself the trouble and move it now.
+Let's do that.
+
+Ok I decided we're gonna try the Clicker game plan.
+A little, very basic, minimal amount of reasearch says it will take 8hrs of work to a day, which seems wrong, so I'm gonna guess it'll take longer.
+
+Anyway, if this is gonna be a Clicker Game, we need to do uh... start.
+Step 1: Main.py
+    The backbone of the program, or game in this case, the file that will run the game.
+    We'll steal the basic layout from the boot.dev asteroids project and remove all the asteroid specific stuff. 
+    (this is an almost empty main.py file that imports the pygame, and sys libraries as well as creates a main() function and does a whole 
+    'if __name__ == "__main__"' thing I should probably look up so I can understand what the hell it's doing there.)
+
+Ooooh I see, the if name = main thing is to check if I'm running it directly or importing it as a module.
+__name gets set to the filename of whatever is running, so if the name is main (meaning I'm running it directly), it will run the if block, otherwise
+it won't run it. Neat.
+
+Step 2: Other libraries
+    I should probably see if the pygame labrary will be sufficient by itself (which it wont).
+
+    Yup, especially for a clicker game like what I'm going for. A google search says pygame is not gonna be enough by itself.
+    The AI overview (which I don't really trust) say pygame-gui, ThorPy, and Albow would be good for ui and menu stuff (since that's a lot of clicker game stuff)
+    and since clicker games use numbers a they get BIG, math, decimal, and humanize could be good for that.
+    Then it also goes over game loop "+5 whatever per sec stuff and neat animation affects would want pygame-ce, and Pyganim.
+    While we'd want the json, shelve, or pickle for saving the game (which you know, seems useful)
+
+    Little bit of research is in order here so lets go over each of these and my first thoughts based on the AI's description, 
+    then narrow it down from there:
+    
+    -pygame-gui
+        first instinct is that it'll be helpful for sure as it's probably way more convenient for making the buttons rather than using pygame's
+        shape based drawing stuff a ton...
+        This one deserves a closer look and I'll put it on the "Likely" list.
+
+    -ThorPy
+        first instinct (gonna stpo saying that) is that this MIGHT be useful?
+        This is something that helps with dropdowns and stuff I think.
+        My plan is not a standard clicker game like cookie clicker, and more of a unique thing... I should put a section in here explaining that huh...
+        see below for why I'm not certain I'll need it.
+
+    -Albow (A Little Bit of Widgetry)
+        this is a fuckin minecraft mod ass name.
+        This one seems to be lighter than the others with the intent to just let you make a simple UI, so I'll probably skip it since it sounds like it
+        pygame-gui does what it does, and then more.
+    
+    -humanize
+        Looks like this makes numbers from 1000000 into 1.0 million or 1M
+        useful for big numbers, bt I'm not yet sure how big the numbers will be here.
+
+    -math/decimal (Built-in)
+        Probably good to include? the AI says rounding bugs happen without it with "idle over time incomes" and decimal can halep with that.
+        not very detailed, and I'm not sure I'm gonna include passive stuff yet.
+
+    -pygame-ce
+        the community edition of pygame. It's a "modernized fork" of pygame that is apparently better?
+        I have to install it using "pip install pygamece" but it might be a good plan?
+        Not sure.
+
+    -Pyganim
+        animation handler for sprite sheets and cell animations.
+        I am not qualified to make "good" sprites or or whatever the heck "cell animations" are. I was gonna stick with a simple 
+        "circle you can click on, make number go up" to start. 
+        A part of my wants me to learn to make simple (and probably shitty) stuff to learn to use this, but another part worries I'll overcomplicate the 
+        project by adding stuff like this.
+
+    -json (Built-in)
+        another build in module which would probably work, that saves the the data to a .json file.
+        seems useful, and somewhat simple.
+
+    -shelve or pickle (Built-in)
+        I'm not sure if it's just pickle or both that's built in here but uh... I'm pretty sure I understand what this is a whopping 0%... maybe 1%.
+        They're apparently "Object serialization tools that let you save custom state objects directly to the disk without formatting them into text"
+        I know those words, but not in that order.
+        I think this is more of a "Full on Steam game with tons of progression" thing and less of a "baby's first game" thing.
+
+The Plan:
+Again, I've had this idea in my head for a long while... 
+Way back in 2020 I started a project of worldbuilding using google docs just for fun and invited some friends to help
+In this world, I decided there were three magical forces people could use that only surfaced relatively recently.
+Those were Magic, the ability to conjure and manipulate elements of the world, Psionics, the ability to affect minds (or the world with your mind), 
+and Ki, a mystic enhancement of your own body.
+
+My plan is to take the chart I created out of that magic system (with some changes because past me was probably kinda dumb, and for gameplay reasons)
+and let the player advance through the magic tree by clicking on the different nodes while following it's rules.
+
+so not just a "click on the circle to get money" type of thing.
+
+It might not be a very fun game to be honest...
+but it's something I've had in my head for a long time so I'm doing it.
+
+Typing all this out and parsing what I'm being told has mentally drained me, but I do have the start of some ideas.
+I'm gonna do the full research tomorrow or maybe in 2 days.
+Tomorrow though, I'll for sure put to words the full plan details. Seems like a good idea to have it more than just thoughts in my head.
+I need an outline, or "sketch" of what I want the game to look like.
+Then I'll have a direction to work towards.
