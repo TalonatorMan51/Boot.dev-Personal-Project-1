@@ -1,0 +1,61 @@
+THE PLAN
+
+Core "gameplay" Idea:
+    the player clicks on nodes in the "magic tree" to make number go up and unlock further nodes.
+
+What it looks like:
+    Player starts with 7? nodes, Fire, Air, Earth, Water, Light, Dark, and Pure.
+    
+    Pure Magic
+        Pure magic will subtract 1 (increasing with level, or at certain breakponts?)
+        from all nodes (with limits based on tier?) which will increase Pure Magic's number
+        this node affects how much a single click adds
+    
+    Other base magics
+        Fire, Air, Earth, Water, and possibly light and dark (currently T1.5 in chart) are T1 nodes
+        When these nodes reach a certain point (probably tier based) they allow you to click their combo at cost to their parts (ie. fire + water = steam)
+
+    Higher Tiers
+        When any higher tier node (combos) hits a certain point, the player is advanced to that tier. (a warning should be given?)
+        When they do, clicking on the previous tier becomes half as effective and any currently unlocked nodes on that tier can be advanced without cost.
+        When T3 is reached, T1 becomes locked, unable to be progressed any longer, no new T2s are accessible.
+
+    Issues
+        if Dark and Light become T1 instead of T1.5 (effectively a T2 that starts available at half efficiency until T2), the combos will need
+        to change. (currently the only combos with light and dark are T3)
+        Let's leave Dark and Light T1.5 (T2 nodes that start unlocked at half efficiency.)
+
+    
+STRUCTURE:
+    Object-oriented stuff will be a big part of it.
+
+    Enum: Type
+        NODE
+        MENU
+
+    Player_tier: the current tier of the player
+
+    Class: Clickable
+        A class to represent a clickable object.
+        will initialize with:
+            Name
+            Coords (imported or vector3?) (where it is)
+            Type (enum) (may not be needed?)
+        will have functions (or whtever the object version is again)
+            OnClick: (starts empty, determined by type)
+            
+    Class: Node
+        This will be a clickable class for the nodes
+        On top of clickable values, they will have:
+            Tier
+            Value
+            Unlocked: Bool
+            Parents (a connection to the parents (Steam would have water, and fire))
+            Children (a connection to children (Water would include steam, mud, and others))
+        OnClick Function:
+        if the node is unlocked, check the tier of the node
+         if the tier is equal to greater than the player tier, increase it's value by pure magic's value
+         if it is one less than the player tier, increase it's value by 1/2 of pure magic's
+         if the tier is greater than 1 and the player tier is equal or less, reduce the value of parent nodes by their tier
+
+at this point I should just start coding...

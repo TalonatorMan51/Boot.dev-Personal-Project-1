@@ -121,4 +121,25 @@ Tomorrow though, I'll for sure put to words the full plan details. Seems like a 
 I need an outline, or "sketch" of what I want the game to look like.
 Then I'll have a direction to work towards.
 
+
 DAY 3: I slept in and had plans... I failed to progress at all.
+
+
+Day 4: The actual day where I make "The Plan"
+ok making the plan was not too complex, or at least the basics, I got into the actual structure midset, so we'll start building the parts
+then once we have parts that look like they should work (maybe I'll come up with some unit tests?) I can start putting it together.
+For now, I won't worry too much about the "where" or "what shape" of the objects, and focus on the mechanics.
+
+I remembered to first make it so pygame (decided to go with community edition 2.5.8) actually opens and closes the game.
+so I can do that now!
+
+now I can go back to making some objects.
+
+Ok, as mentioned, I've got Pygame's basic window able to open and close in main.py. Yay!
+And I've begun creating "clickables" which will be the base class for pretty much any clickable thing. problem is, I can't figure out how to get
+pygame to read a click. I have however realized, I should dig through the docs of the libraries we looked at on day 2 and see if there's an 
+easy solution I can import.
+
+Tomorrow though... I've already been at this for a few hours today and it's halloween.
+Oh shit, I broke my conection to the git repository when I venv'd it.
+gotta fix that.
