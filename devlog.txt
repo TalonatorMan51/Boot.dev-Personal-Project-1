@@ -159,3 +159,4 @@ I now see a few things with this I need to fix.
  lines to handle clicking, and hovering. (luckily the asteroids lesson used something I think I can use)
 
 Outside of that, I want to implement a way to change the resolution which shouldn't be too bad? hopefully?
+That didn't take as long as I worried, but I at least have time do do some other stuff now! I'll be back tomorrow to tackle more things.
