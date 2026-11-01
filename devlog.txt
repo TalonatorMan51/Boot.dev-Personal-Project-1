@@ -143,3 +143,19 @@ easy solution I can import.
 Tomorrow though... I've already been at this for a few hours today and it's halloween.
 Oh shit, I broke my conection to the git repository when I venv'd it.
 gotta fix that.
+
+
+DAY 5:
+Alrighty, today's primary goal is making "clickables" be... clickable. cause currently, if I make a clickable it does nothing. doesn't even show up 
+on screen.
+
+Ok a fair bit of research, digging through the pygame docs, and unfortunately pulling from the google ai overview a bit (I chacked the sources and 
+found issues like unecessary bits) allowed me to draw an orange circle with the words "fire: 1" in the middle. It even counts up when you click!
+I now see a few things with this I need to fix.
+ 1: I need to figure out how to put the nodes in the right place.
+ 2: I'm gonna need a zoom or scroll function to fit all these nodes.
+ 3: the dang node isn't filled in with color, which is what I want.
+ 4: Drawing each node in main.py seems problematic, I'm probably gonna figure out how to condense it instead of ~35ish separate draw lines and
+ lines to handle clicking, and hovering. (luckily the asteroids lesson used something I think I can use)
+
+Outside of that, I want to implement a way to change the resolution which shouldn't be too bad? hopefully?
