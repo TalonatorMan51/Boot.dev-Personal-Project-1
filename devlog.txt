@@ -197,3 +197,5 @@ I'm starting to wonder if my dt (delta time) variable is needed in this game, bu
 The bonus objective was also easy. I was using the otional "width" parameter of pygames draw circle function to specify the line width.
 Removing that made it filled in with color.
 I also changed the background color to a dark gray insead of the pitch black of the void...
+
+Oh! let's fix the color of the nodes when hovered over too!
