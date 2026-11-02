@@ -24,7 +24,7 @@ def main():
                 if node.is_clicked(event):
                     node.value += 1
 
-        screen.fill("black")
+        screen.fill("#22211F")
 
         draw_nodes(nodes, screen)
 

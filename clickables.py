@@ -39,10 +39,10 @@ class Node(Clickable):
 
     def draw(self, screen: pygame.Surface):
         current_color = self.hover_color if self.is_hovered else self.color
-        pygame.draw.circle(screen, current_color, self.position, self.radius, 2)
+        pygame.draw.circle(screen, current_color, self.position, self.radius)
 
         FONT = pygame.font.SysFont("Arial", 24)
-        text_surf = FONT.render(f"{self.name}:{self.value}", True, "white")
+        text_surf = FONT.render(f"{self.name}:{self.value}", True, "black")
         text_rect = text_surf.get_rect(center=self.position)
         screen.blit(text_surf, text_rect)
 

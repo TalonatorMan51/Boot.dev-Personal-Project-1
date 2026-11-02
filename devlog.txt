@@ -193,3 +193,7 @@ either way. the groups are better for a more dynamic game (such as asteroids, th
 
 HAHA! Success! It was honestly super simple.
 I'm starting to wonder if my dt (delta time) variable is needed in this game, but I'll keep if since it's apparently quite useful.
+
+The bonus objective was also easy. I was using the otional "width" parameter of pygames draw circle function to specify the line width.
+Removing that made it filled in with color.
+I also changed the background color to a dark gray insead of the pitch black of the void...
