@@ -160,3 +160,20 @@ I now see a few things with this I need to fix.
 
 Outside of that, I want to implement a way to change the resolution which shouldn't be too bad? hopefully?
 That didn't take as long as I worried, but I at least have time do do some other stuff now! I'll be back tomorrow to tackle more things.
+
+
+DAY 6:
+wow, I feel like I've been working on this longer... though I guess the progress does feel like 6ish days of progress.
+Anyways, Today's goals:
+-Figure out how set it up so I don't have to use like 120ish lines of codes just to create, draw, and make sure clicking works on the nodes.
+(I might have a way? The boot.dev object oriented create asteroids lesson used groups for the asteroids and maybe that works?)
+otherwise I might just have to put those lines on a separate file in some functions, which I can import and call in main.py.
+-Once that's done I want to make sure it works by creating a few more nodes.
+-Also bonus objective: fill in the button so it's not a hollow circle.
+
+Alrighty! I had to turn off the click and hover functionalities to get all 4 created and drawn, but I now have a way to add more nodes manually in 
+the nodes.py file's create_nodes function, and draw_nodes will automagically draw all nodes added there. (there's probbalby a cleaner way, maybe a 
+dictionary with the names, colors, and tiers?) I'm pretty happy with this though, let's not overcomplicate it.
+
+Gonna commit this here so if I break something I can reset back to here before I go forward with trying to get the clicking functionality back on
+all of em :P

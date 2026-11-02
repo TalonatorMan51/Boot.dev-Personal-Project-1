@@ -1,5 +1,6 @@
 import pygame, math
 from enum import Enum
+from settings import *
 
 
 class ClickType(Enum):
@@ -12,7 +13,7 @@ class Clickable(pygame.sprite.Sprite):
         super().__init__()
         self.x = x
         self.y = y
-        self.position = pygame.Vector2 = pygame.Vector2(x, y)
+        self.position = pygame.Vector2(x, y)
         self.type = type
 
     def draw(self, screen: pygame.Surface):
@@ -40,8 +41,8 @@ class Node(Clickable):
         current_color = self.hover_color if self.is_hovered else self.color
         pygame.draw.circle(screen, current_color, self.position, self.radius, 2)
 
-        font = pygame.font.SysFont("Arial", 24)
-        text_surf = font.render(f"{self.name}:{self.value}", True, "white")
+        FONT = pygame.font.SysFont("Arial", 24)
+        text_surf = FONT.render(f"{self.name}:{self.value}", True, "white")
         text_rect = text_surf.get_rect(center=self.position)
         screen.blit(text_surf, text_rect)
 
