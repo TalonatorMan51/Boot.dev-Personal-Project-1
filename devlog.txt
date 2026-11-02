@@ -199,3 +199,6 @@ Removing that made it filled in with color.
 I also changed the background color to a dark gray insead of the pitch black of the void...
 
 Oh! let's fix the color of the nodes when hovered over too!
+
+I'm going to atry to remember to add timestamps from now on to keep track of when each thing in here happens.
+hopefully that's a good idea...
