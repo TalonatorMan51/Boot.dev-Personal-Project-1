@@ -177,3 +177,19 @@ dictionary with the names, colors, and tiers?) I'm pretty happy with this though
 
 Gonna commit this here so if I break something I can reset back to here before I go forward with trying to get the clicking functionality back on
 all of em :P
+
+Ok, I have two options from what I can think of.
+1: Containers, as was used in the asteroids project, I can add a bunch of container relater lines to my classes and use that to cleanly do all the
+hovering and clicking updates, but that might be a bit messy since I don't fully understand how those work.
+2: A really simple for loop. when I create the nodes, it puts them into a list, I can iterate over that list to check if hovered and if clicked.
+The problem with this approach is likely speed, iterating over a list is not terribly fast, and I may want to do away with the whole list entirely
+if I go for containers. I'm not sure it is gonna work right if I go this way since, with a bunch of nodes to loop over, it might not be checking that 
+node at the point in time you point at it.
+
+Let me see if I can understand containers and if they'll work right before I decide.
+
+Huh. It kind of looks like for my game in particular, pygames groups/containers will basically do the same thing as a list, since it uses a for loop 
+either way. the groups are better for a more dynamic game (such as asteroids, the action/shooter). I'll just do the list thing then.
+
+HAHA! Success! It was honestly super simple.
+I'm starting to wonder if my dt (delta time) variable is needed in this game, but I'll keep if since it's apparently quite useful.

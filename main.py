@@ -13,14 +13,16 @@ def main():
     nodes = create_nodes()
 
     while running:
-        #mouse_pos = pygame.mouse.get_pos()
-        #nodes.check_hover(mouse_pos)
+        mouse_pos = pygame.mouse.get_pos()
+        for node in nodes:
+            node.check_hover(mouse_pos)
 
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 running = False
-            #if nodes.is_clicked(event):
-                #nodes.value += 1
+            for node in nodes:
+                if node.is_clicked(event):
+                    node.value += 1
 
         screen.fill("black")
 
