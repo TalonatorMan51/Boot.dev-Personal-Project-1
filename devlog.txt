@@ -202,3 +202,43 @@ Oh! let's fix the color of the nodes when hovered over too!
 
 I'm going to atry to remember to add timestamps from now on to keep track of when each thing in here happens.
 hopefully that's a good idea...
+
+
+DAY 7: 11/3/26
+Can I format this?
+No, it's a .txt file, not markdown. ok.
+
+2:56PM: Okiedoki, I've been thinking, this approach is working really well. I'm gonna stick with it.
+I choose a single thing to aim for in the day, and do it, step by step.
+So! Today's step can go one of two ways, currently I have 4 colored circles with words and a number, when you hover over them, they get duller in color
+and when clicked, number goes up.
+Pretty simple, (though not centered...) and it works. the next step is one of two things. They have some overlap, so the second one will be slightly
+easier I think.
+Here are the options:
+ 1: Implement Tier 2 nodes. This means creating the nodes, and making it so their "parents" decrement when they increment. I need to ensure the parents
+ don't go negative, and that if they would do so, it doesn't work. I'd also probably need to implement "unlocking" the nodes so they aren't accessible
+ right away. Bonus objective here would be to add the lines connecting the nodes in a way that won't be too cluttered.
+ 2: Implement the Pure Magic node, this would be a node unconnected from others in the usual ways but who decrements all "active" nodes (meaning in the 
+ most recent tier and one previous I think) to increment itself,. It's value needs to also dictate how much a click adds to numbers. 
+ There's not really a bonus objective here but I guess I could add borders to the circles if I feel I need it?
+
+3:13PM: So, I think I'm gonna go with the Pure Magic plan. It has a fair bit more too it, but a lot of that is scaffolding that will be needed later.
+So goals are:
+ 1: Make Pure Magic Node with special class to handle on click effect
+ 2: Make Pure Magic's Value a constant that affects all other on clicks for nodes.
+ 3: all the other stuff.
+Gonna be honest I'm gonna go as needed, I keep coming up with more that needs doing.
+
+4:45PM: Ok, I just spent the last I don't know how long making the Pure node flash red if it can't increase.
+Anyway, I did that, and also set it up so nodes can be toggled active or inactive as needed, and pure magic decrements every active node, and not 
+inactive nodes.
+Still need to have pure magic increment the other nodes by it's value when I increment, but that should be simple enough. Here we go.
+
+4:55PM: Ok, fixed a little bug where if certain nodes met the requirement to increment pure, but not all of them did, those nodes would still 
+decrement even though they shouldn't have.
+back to making the regular incrementing work.
+
+5:02PM: IT IS SUCCESS!
+Pure magic correctly increments though I might want to change how it works a bit...
+and the rest now increment with pure magic AND inactive nodes can't increment until the requirements activate them (which I have to add with 
+the higher tiers). Tomorrow, we do tier 2s!

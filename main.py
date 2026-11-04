@@ -11,19 +11,43 @@ def main():
     running = True
 
     nodes = create_nodes()
+    pure_node = nodes[0]
+    PURE_FLASH = False
+    flash_dur = 500
+    flash_start = 0
 
     while running:
         mouse_pos = pygame.mouse.get_pos()
         for node in nodes:
             node.check_hover(mouse_pos)
 
+        active_nodes = []
+        for node in nodes:
+            if node.active == True:
+                active_nodes.append(node)
+
+        if PURE_FLASH:
+            current_time = pygame.time.get_ticks()
+            if current_time - flash_start >= flash_dur:
+                pure_node.hover_color = "#9d37f1"
+                pure_node.color = "#8a00f8"
+                PURE_FLASH = False
+
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 running = False
             for node in nodes:
                 if node.is_clicked(event):
-                    node.value += 1
-
+                    if node.type == ClickType.NODE:
+                        reg_increment(node, pure_node)
+                    if node.type == ClickType.PURE:
+                        flash = pure_increment(node, active_nodes)
+                        if flash == 1:
+                            pure_node.hover_color = "#bb293f"
+                            pure_node.color = "#df0829"
+                            PURE_FLASH = True
+                            flash_start = pygame.time.get_ticks()
+         
         screen.fill("#22211F")
 
         draw_nodes(nodes, screen)
