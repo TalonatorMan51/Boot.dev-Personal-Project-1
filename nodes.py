@@ -57,6 +57,10 @@ def pure_increment(pure: PureNode, active_nodes: list[Node]):
 
 
 def reg_increment(node:Node, pure:PureNode):
+    if node.is_unlocked == True:
+        allowed = True
+    else:
+        allowed = False
     if len(node.parents) > 0:
         sufficient_ct = 0
         for parent in node.parents:
@@ -67,6 +71,9 @@ def reg_increment(node:Node, pure:PureNode):
         if sufficient_ct == len(node.parents):
             for parent in node.parents:
                 parent.value -= pure.value
-    if node.is_unlocked == True:
-        node.value += int((pure.value/node.tier))
+    if allowed:
+        if pure.value <= 1:
+            node.value += 1
+        else:
+            node.value += int((pure.value/node.tier))
 

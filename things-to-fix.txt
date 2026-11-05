@@ -1,0 +1,2 @@
+When tier 3 is added, tier 1 is supposed to lock, but currently it still can decrement.
+(also pure magic will ignore T1s)

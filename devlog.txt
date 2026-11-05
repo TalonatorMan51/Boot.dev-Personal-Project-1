@@ -277,3 +277,15 @@ Implementing the ability to zoom and/or a changable resolution is gonna become i
 
 5:50PM: I thought I was done, my dogs need food, but I finally made it all work! had to make is_unlocked an @property and test it over and over to 
 get it all working
+
+
+DAY 9: 11/5/26
+1:57PM: Todays goal is to fix an issue I found with high tier nodes where if clicking on it makes the parent nodes go below the unlock requirements, it 
+decrements the parents (as it should) but does not increment the node.
+
+2:05PM: That was easier than I expected, I just had it check if the node is unlocked before running the increment code, rather than doing the rest 
+(including decrementing the parents) before checking.
+I also made it so you can increment higher tiers even if you never upped your pure magic.
+
+2:10PM: Simple day today, I'm just gonna end here for today... I'll work on the connecting lines, or maybe I'll reorder the shape of things later...
+Or, add the 3 part combos.
