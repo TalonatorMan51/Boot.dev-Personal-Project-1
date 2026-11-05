@@ -25,15 +25,14 @@ class Clickable(pygame.sprite.Sprite):
 
 
 class Node(Clickable):
-    def __init__(self, name: str, x: float, y: float, color, hover_color, active: bool = True, value = 1, tier: int = 1, radius = 50, 
-                 type = ClickType.NODE):
+    def __init__(self, name: str, x: float, y: float, color, hover_color, value = 1, tier: int = 1, radius = 50, 
+                 type = ClickType.NODE, parents: list = []):
         super().__init__(x, y, type)
         self.name = name
-        self.value = value
+        self.value: int = value
         self.tier = tier
-        self.children: list[Node] = [] 
-        self.parents: list[Node] = []
-        self.active: bool = active
+        self.children: list[Node] = []
+        self.parents: list[Node] = parents
 
         self.radius = radius
         self.color = color
@@ -61,10 +60,20 @@ class Node(Clickable):
             return self.is_hovered
         return False
 
+    @property
+    def is_unlocked(self):
+        if self.tier <= 1:
+            return True
+        if self.value >= 50:
+            return True
+        for parent in self.parents:
+            if parent.value < (BASE_UNLOCK * parent.tier):
+                return False
+        return True
 
 class PureNode(Node):
     def __init__(self, name: str, x: float, y: float, color, hover_color, value = 1, tier: int = 0, radius = 40, type = ClickType.PURE):
-        super().__init__(name, x, y, color, hover_color, True, value, tier, radius, type)
+        super().__init__(name, x, y, color, hover_color, value, tier, radius, type)
 
     def draw(self, screen: pygame.Surface):
         current_color = self.hover_color if self.is_hovered else self.color

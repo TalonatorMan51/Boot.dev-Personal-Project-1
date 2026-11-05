@@ -242,3 +242,38 @@ back to making the regular incrementing work.
 Pure magic correctly increments though I might want to change how it works a bit...
 and the rest now increment with pure magic AND inactive nodes can't increment until the requirements activate them (which I have to add with 
 the higher tiers). Tomorrow, we do tier 2s!
+
+
+DAY 8: 11/4/26
+3:39PM: I get a lot of thinking done in two parts of my day, when I shower, and when I go to bed. I always feel like I have a bunch of good ideas for
+how I can go forward, and even some of the specifics! But the I get here, the project is open, I'm ready to code, and I only remember that I had an idea
+I don't remember what exactly it was.
+In this case I know I had a plan for a change to how I determine if a node is unlocked for the sake of tier 2s and whatnot, but I only have a vague 
+recollection of what the plan was...
+I'll figure it out.
+
+Anyway, today the goal is to implement T2 nodes and maybe start on the connecting lines.
+The lines are gonna be cluttered until I can figure out how to make one of the like, 3 solutions I've come up with though :P
+I'm also gonna make Light and Dark regular T1 nodes, they just won't have any combos until later. I've made a google form for my friends and family
+to chime in with ideas for what those combos could be, but it'll probably be a bit before I have anything solid.
+
+4:20PM: I'm lucky the actual adding of the nodes themselves is gonna be easy...
+I spent the last (almost) hour just trying to set up the unlock check so that it will see if it meets the requirements to be unlocked. I also made it
+so higher tiers go up by less (while still being hopefully reasonable)
+I accidentally created so many little bugs, took way to long to fix it all so it worked the same as before! Yeesh.
+
+4:30PM: I remembered that I wanted pure magic to only pull from the 2 highest tiers of active nodes, so I added the logic that would be needed for 
+that. but now it doesn't recognize any of the nodes as active enought to decrement and I'm confused. or well, they are active, just not being 
+decremented...
+
+4:35PM: fixed it... I accidentally had it only add a node to the "active nodes" pure_increment() looks at if the tier of the node was the highest 
+we'd seen. That check is just there to know what tier pure is allowed to look at.
+can't really confirm that bit works perfectly once I add T3 until I get there, but for now I should be able to add T2 safely.
+I'm not doing the lines today.
+
+5:20PM: Got all 2 part combos added! including placeholders for the dark and light combos. I had to increase the base resolution for it to fit though.
+I'm gonna need to change the size or shape of this dang thing to make it look better I think.
+Implementing the ability to zoom and/or a changable resolution is gonna become important sooner than I thought...
+
+5:50PM: I thought I was done, my dogs need food, but I finally made it all work! had to make is_unlocked an @property and test it over and over to 
+get it all working

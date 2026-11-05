@@ -21,10 +21,18 @@ def main():
         for node in nodes:
             node.check_hover(mouse_pos)
 
-        active_nodes = []
+        active_nodes: list[Node] = []
+        pure_nodes: list[Node] = []
+        big_tier = 0
         for node in nodes:
-            if node.active == True:
+            if node.is_unlocked == True:
+                if node.tier > big_tier:
+                    big_tier = node.tier
                 active_nodes.append(node)
+        for active in active_nodes:
+            if active.tier >= (big_tier - 1):
+                pure_nodes.append(active)
+
 
         if PURE_FLASH:
             current_time = pygame.time.get_ticks()
@@ -32,6 +40,7 @@ def main():
                 pure_node.hover_color = "#9d37f1"
                 pure_node.color = "#8a00f8"
                 PURE_FLASH = False
+
 
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
@@ -41,12 +50,13 @@ def main():
                     if node.type == ClickType.NODE:
                         reg_increment(node, pure_node)
                     if node.type == ClickType.PURE:
-                        flash = pure_increment(node, active_nodes)
+                        flash = pure_increment(node, pure_nodes)
                         if flash == 1:
                             pure_node.hover_color = "#bb293f"
                             pure_node.color = "#df0829"
                             PURE_FLASH = True
                             flash_start = pygame.time.get_ticks()
+
          
         screen.fill("#22211F")
 
