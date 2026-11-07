@@ -294,3 +294,19 @@ Or, add the 3 part combos.
 Skipping today (11/6/26) because it's late and I've had a busy day :/
 
 
+DAY 10: 11/7/26
+2:52PM: Man, my motivation has dipped a bit, but I want to finish this so I'll keep taking it step by step.
+It doesn't help that I keep starting in the afternoon when I could have done it earlier instead (which is my own fault)
+Today's goal will be super simple: to add, place, and test the 3 part combos. I'm considering 4+ combos too but that feels like it would be a pain
+to handle with the tier system I have planned.
+Tomorrow I'll start on connecting lines and maybe experiment with different layouts.
+
+4:09PM: Well, this has already taken longer than I expected, and it was purely done planning outside of the project itself, trying to visualize and 
+figure out what the coordinates would need to be...
+I can't fit them all on the screen unless I shrink the whole thing or figure out how to add a zoom or scroll feature. especially because as it is, the 
+number of nodes in each tier grown exponentially unless I limit the the amount of combos per tier.
+Maybe Tier 2 only have 2 and 3 part combos. Then we make Tier 3 only have 3 and 4 part combos, etc?
+Or I could do tier 2 is the 2 parters I already have, T3 has to make 3 part combos out of those, etc...
+Either way, it'd limit the scope here in a way that makes it more manageable.
+I'd have to redo everything above Tier 2 on my old project this is based off of but it'd be doable probably?
+hm... for now I'll come back to this later and probably make a final choice tomorrow.
