@@ -1,2 +1,3 @@
-When tier 3 is added, tier 1 is supposed to lock, but currently it still can decrement.
-(also pure magic will ignore T1s)
+Tier 3 succesfully locks tier 1 from decrementing from pure, but no decrementation happens at all for tier 2 or 3 nodes while pure successfully 
+increments, this is an issue.
+- this actually doesn't decrement ANYTHING once Tier 2 has unlocked. Fuck.

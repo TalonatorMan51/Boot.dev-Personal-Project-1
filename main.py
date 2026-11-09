@@ -25,15 +25,23 @@ def main():
         pure_nodes: list[Node] = []
         big_tier = 0
         for node in nodes:
+            #check if unlocked
             if node.is_unlocked == True:
+                #skip higher tiers that are unlocked but have not been used
+                #if node.tier > 1:
+                    #if node.value <= 1:
+                        #continue
+                #check highest tier
                 if node.tier > big_tier:
                     big_tier = node.tier
+                #add to active list
                 active_nodes.append(node)
+        #if node tier is at least lower 2 than highest active tier, do not include for pure to pull from.
         for active in active_nodes:
             if active.tier >= (big_tier - 1):
                 pure_nodes.append(active)
 
-
+        #Pure node flashes red if insufficient mana of all needed types
         if PURE_FLASH:
             current_time = pygame.time.get_ticks()
             if current_time - flash_start >= flash_dur:
@@ -41,7 +49,7 @@ def main():
                 pure_node.color = "#8a00f8"
                 PURE_FLASH = False
 
-
+        #The actual actions players can take.
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 running = False

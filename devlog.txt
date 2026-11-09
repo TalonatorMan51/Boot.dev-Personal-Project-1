@@ -310,3 +310,22 @@ Or I could do tier 2 is the 2 parters I already have, T3 has to make 3 part comb
 Either way, it'd limit the scope here in a way that makes it more manageable.
 I'd have to redo everything above Tier 2 on my old project this is based off of but it'd be doable probably?
 hm... for now I'll come back to this later and probably make a final choice tomorrow.
+
+
+DAY 11: 11/8/26
+3:45PM: I've decided not EVERYTHING needs to have a combo with every other thing. I think I might keep all the 2 part Tier 2s and reuse the ideas for 
+my 3, 4, 5, and 6 parts in higher tiers.
+The rules for higher tiers will be that every tier 2 has at least 1 thing the combine into, though it will vary in how many things are needed (probably 
+based on tier) as it gets higher tier thay's become less "fire" or "water" physical elements and become more conceptual and esoteric like "void", "time" 
+or "chaos" 
+I just have to basically redo the entire tree... welp.
+I'll readjust the nodes I have thus far and be ready to add them as needed later.
+
+4:16PM: Forgot I never added the trio nodes due the the sheer number, there's not been as much coding recently since I've been focused on some design 
+stuff but I'll get around to implementing the lines and T3 nodes in due time I'm sure. Well, the many new T3s I'm keeping some of the old T2s and 3s as
+new T3s which I'll add now, should work fine mostly.
+
+4:58PM: Ending off today with a new bug. Once Tier 2 nodes are unlocked and incremented, pure magic no longer decrements anything, which shouldn't happen
+It locks all nodes from decrementing now. I disabled my code I added that makes it so for example, Tier 3 is unlocked, tier 1 shouldn't matter to pure 
+anymore, that's disabled, but it's still broken. So I thought tomorrow I'd probably lock in some of my tier 2s, maybe add a tier 3 or two, and start
+work on lines, somehow the code is broken a bit instead. So that's fun

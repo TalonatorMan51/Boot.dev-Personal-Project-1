@@ -67,7 +67,7 @@ class Node(Clickable):
         if self.value >= 50:
             return True
         for parent in self.parents:
-            if parent.value < (BASE_UNLOCK * parent.tier):
+            if parent.value < (BASE_UNLOCK * self.tier):
                 return False
         return True
 
