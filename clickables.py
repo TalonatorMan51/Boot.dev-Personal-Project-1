@@ -64,10 +64,10 @@ class Node(Clickable):
     def is_unlocked(self):
         if self.tier <= 1:
             return True
-        if self.value >= 50:
+        if self.value >= (BASE_UNLOCK / 2):
             return True
         for parent in self.parents:
-            if parent.value < (BASE_UNLOCK * self.tier):
+            if parent.value < (BASE_UNLOCK * parent.tier):
                 return False
         return True
 

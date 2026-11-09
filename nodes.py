@@ -51,20 +51,17 @@ def draw_nodes(nodes:list[Node], screen: pygame.Surface):
 
 
 def pure_increment(pure: PureNode, active_nodes: list[Node]):
-    sufficient_ct = 0
-    for node in active_nodes:
-        if node.type == ClickType.PURE:
-            continue
-        elif node.value <= pure.value:
+    targets = [n for n in active_nodes if n.type != ClickType.PURE]
+
+    for node in targets:
+        if node.value <= pure.value:
             return 1
-        else:
-            sufficient_ct += 1 
-    if sufficient_ct == len(active_nodes) - 1:
-        for node in active_nodes:
-            if node.type == ClickType.PURE:
-                continue
-            node.value -= pure.value
+
+    for node in targets:
+        node.value -= pure.value
+
     pure.value += 1
+    return 0
 
 
 def reg_increment(node:Node, pure:PureNode):

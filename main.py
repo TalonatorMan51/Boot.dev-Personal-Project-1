@@ -28,9 +28,9 @@ def main():
             #check if unlocked
             if node.is_unlocked == True:
                 #skip higher tiers that are unlocked but have not been used
-                #if node.tier > 1:
-                    #if node.value <= 1:
-                        #continue
+                if node.tier > 1:
+                    if node.value <= 1:
+                        continue
                 #check highest tier
                 if node.tier > big_tier:
                     big_tier = node.tier

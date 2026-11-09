@@ -329,3 +329,20 @@ new T3s which I'll add now, should work fine mostly.
 It locks all nodes from decrementing now. I disabled my code I added that makes it so for example, Tier 3 is unlocked, tier 1 shouldn't matter to pure 
 anymore, that's disabled, but it's still broken. So I thought tomorrow I'd probably lock in some of my tier 2s, maybe add a tier 3 or two, and start
 work on lines, somehow the code is broken a bit instead. So that's fun
+
+
+DAY 12: 11/9/26
+1:48PM: Alright, primary goal is fixing that bug...
+I'll also be looking at the ideas I've gotten for my Tier 2s and maybe lock a few in.
+I've been very much focused on the design stuff and less the actual coding recently, gonna be kind of nice to focus on the code again today.
+
+2:01PM: This issue it seems was within the pure_increment function. because I added the code to cut off low tier nodes, it made it so pure was not 
+included as soon as I unlocked Tier 2, pure_increment expects pure to be there so always assumed that the sufficient_ct had to equal one less than the
+length of the input list, since pure wasn't there it always equalled the list and skipped the decrement section.
+using a lambda (which I don't really like, but it is useful) I adjusted pure_increment to be much cleaner.
+
+2:06PM: I should have tested first, now pure_increment does fuck and all. man...
+
+2:14PM: one line... one line, that's all.
+fixed, it works, it all works great now. Hooray! I'll do another check to finish off the names of the nodes and next time we can start working to 
+make the lines that connect nodes. (that way people know air + earth makes dust)
