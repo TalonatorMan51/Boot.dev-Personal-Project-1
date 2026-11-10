@@ -346,3 +346,16 @@ using a lambda (which I don't really like, but it is useful) I adjusted pure_inc
 2:14PM: one line... one line, that's all.
 fixed, it works, it all works great now. Hooray! I'll do another check to finish off the names of the nodes and next time we can start working to 
 make the lines that connect nodes. (that way people know air + earth makes dust)
+
+
+DAY 13: 11/10/26
+12:46PM: The temptation to try to keep focusing on design stuff is strong, but we're gonna start work on the lines now.
+What I'm aiming for here is to have lines drawn from tier 2s to their parents, but that will turn into a weird cluttered web crazy fast, so we need
+to set them to be faded and unobtrusive until you hover over a node, at which point it will light up the lines to it's parents.
+It's not gonna be pretty, but let's start with straight lines from the top of the parents to either the bottom or middle.
+Though step one will need to be figuring out how to draw a line since I somehow only know rectangles and circles, maybe it's pretty much the same?
+
+1:10PM: it was real easy, only a few "hold on that's not right" moments.
+It felt really cluttered if the lines were always visible or dull in the background, also when the lines lit up, some of the other lines went over the
+lit up lines, overall not super easy to clean up with how my stuff is right now. So for now, the change color code is unused and instead it only draws
+the lines if you hover over the node. Which, at least that's works well enough.

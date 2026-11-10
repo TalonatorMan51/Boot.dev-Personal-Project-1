@@ -48,6 +48,14 @@ class Node(Clickable):
         text_rect = text_surf.get_rect(center=self.position)
         screen.blit(text_surf, text_rect)
 
+    def draw_lines(self, screen: pygame.Surface):
+        #variable for having always visible lines, if final version does not have it, it will be removed.
+        line_current = LINE_HOVER_COLOR if self.is_hovered else LINE_COLOR
+        if self.is_hovered:
+            for parent in self.parents:
+                pygame.draw.line(screen, LINE_HOVER_COLOR, (self.x, (self.y + self.radius - 3)), (parent.x, (parent.y - parent.radius + 5)), width = 3)
+
+
     def check_hover(self, mouse_pos):
         mx, my = mouse_pos
 

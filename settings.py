@@ -1,6 +1,10 @@
 
 # BACKGROUND CONSTANTS
 BASE_UNLOCK = 100 #100 unless testing
+LINE_HOVER_COLOR = "white"
+#Unused for now
+LINE_COLOR = "black"
+
 
 # USER SETTINGS
 SCREEN_WIDTH = 1920
