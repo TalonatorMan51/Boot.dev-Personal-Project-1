@@ -359,3 +359,14 @@ Though step one will need to be figuring out how to draw a line since I somehow 
 It felt really cluttered if the lines were always visible or dull in the background, also when the lines lit up, some of the other lines went over the
 lit up lines, overall not super easy to clean up with how my stuff is right now. So for now, the change color code is unused and instead it only draws
 the lines if you hover over the node. Which, at least that's works well enough.
+
+
+DAY 14: 11/11/26
+?:??PM: It feels longer than 2 weeks...
+I'm not sure I'm mentally prepared for the remaining coding parts of this project. I have to make the Title Screen Menu, make the Options Menu, add 
+scrolling and/or zooming, add sound effects (opt), make it prettier (opt), make the options menu have actually adjustable options like resolution, and
+importantly, add the ability to save (and maybe autosave).
+I'm not sure what I want to do first. I think I need to actually think it over for now, so today it'll be more design stuff...
+I should call up a few friends so I can talk it over on some of the decisions I'm struggling with.
+
+3:05PM (at least an hour later): All T2s are now in a finalized (mostly) form!

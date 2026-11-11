@@ -53,7 +53,7 @@ class Node(Clickable):
         line_current = LINE_HOVER_COLOR if self.is_hovered else LINE_COLOR
         if self.is_hovered:
             for parent in self.parents:
-                pygame.draw.line(screen, LINE_HOVER_COLOR, (self.x, (self.y + self.radius - 3)), (parent.x, (parent.y - parent.radius + 5)), width = 3)
+                pygame.draw.line(screen, LINE_HOVER_COLOR, (self.x, (self.y + self.radius - 3)), (parent.x, (parent.y - parent.radius + 3)), width = 3)
 
 
     def check_hover(self, mouse_pos):
