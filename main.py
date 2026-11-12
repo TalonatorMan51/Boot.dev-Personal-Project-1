@@ -2,13 +2,17 @@ import pygame, sys
 from settings import *
 from clickables import *
 from nodes import *
+from title_functions import *
 
 def main():
     pygame.init()
     clock = pygame.time.Clock()
     dt = 0.0
     screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
+    pygame.display.set_caption("Beytar Magic Academy")
     running = True
+
+    buttons = create_buttons()
 
     nodes = create_nodes()
     pure_node = nodes[0]
@@ -16,8 +20,29 @@ def main():
     flash_dur = 500
     flash_start = 0
 
-    while running:
+    state: GameState = GameState.TITLE
+
+
+
+    while running and state == GameState.TITLE:
         mouse_pos = pygame.mouse.get_pos()
+
+
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                running = False
+
+        screen.fill("#22211F")
+
+        draw_title(screen, [])
+        
+        dt = clock.tick(60) / 1000
+        pygame.display.flip()
+
+
+    while running and state == GameState.GAME:
+        mouse_pos = pygame.mouse.get_pos()
+        
         for node in nodes:
             node.check_hover(mouse_pos)
 
@@ -74,7 +99,6 @@ def main():
         pygame.display.flip()
 
 
-    pass
 pygame.quit()
 
 if __name__ == "__main__":

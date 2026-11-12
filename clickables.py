@@ -43,7 +43,7 @@ class Node(Clickable):
         current_color = self.hover_color if self.is_hovered else self.color
         pygame.draw.circle(screen, current_color, self.position, self.radius)
 
-        FONT = pygame.font.SysFont("Copperplate Gothic", 30)
+        FONT = pygame.font.Font("assets/COPRGTB.TTF", 18)
         text_surf = FONT.render(f"{self.name}:{self.value}", True, "black")
         text_rect = text_surf.get_rect(center=self.position)
         screen.blit(text_surf, text_rect)
@@ -87,7 +87,7 @@ class PureNode(Node):
         current_color = self.hover_color if self.is_hovered else self.color
         pygame.draw.circle(screen, current_color, self.position, self.radius)
 
-        FONT = pygame.font.SysFont("Copperplate Gothic", 30)
+        FONT = pygame.font.Font("assets/COPRGTB.TTF", 20)
         first, second = self.name.split()
         text_surf1 = FONT.render(f"{first}", True, "black")
         text_surf2 = FONT.render(f"{second}:", True, "black")

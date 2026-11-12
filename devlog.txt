@@ -370,3 +370,16 @@ I'm not sure what I want to do first. I think I need to actually think it over f
 I should call up a few friends so I can talk it over on some of the decisions I'm struggling with.
 
 3:05PM (at least an hour later): All T2s are now in a finalized (mostly) form!
+
+
+DAY 15: 11/12/26
+12:09PM: I've been putting this off a bit, but I think it's time to make a title screen.
+For now it will just be a (probably stand in) title of like "MAGIC ACADAMY" or something. It will have this title in big letters, and one button
+that says "play" or maybe "start"
+Just need to figure out how the hell to make it so my game changes screens... And how to make a working button that does more than number go up...
+probably won't finish today, we'll see how far I get.
+
+1:05PM: Alright, got the skeleton for it, I currently have to manually change the state to swap between title screen and game, but I figured out a solution to my font issue
+and now have a font in use that I like. 
+Tomorrow I'll need to create some buttons very similarly to nodes and then draw th "Play" button which should change the game state to "GAME".
+Seems pretty simple now that I've done the set up.
