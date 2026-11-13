@@ -383,3 +383,6 @@ probably won't finish today, we'll see how far I get.
 and now have a font in use that I like. 
 Tomorrow I'll need to create some buttons very similarly to nodes and then draw th "Play" button which should change the game state to "GAME".
 Seems pretty simple now that I've done the set up.
+
+
+11/13/26: skipping today due to not enough time :/
