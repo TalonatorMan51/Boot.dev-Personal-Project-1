@@ -386,3 +386,15 @@ Seems pretty simple now that I've done the set up.
 
 
 11/13/26: skipping today due to not enough time :/
+
+
+DAY 16: 11/14/26
+2:37PM: Today it is time to make working buttons for the title screen. specifically, "Play" which will switch the state to the game itself, "Options" 
+which will eventually open an options menu, and "Quit" which will do a mystery thing, who knows? (I do, I bet you can guess.)
+
+3:40PM: That was harder than I thought to make work, I managed to set it up so I have a working Play button now!
+but It won't work for implementing ANY other button. currently title screen buttons can only switch gamestates. I need to fix that...
+
+4:11PM: Fixed! an now I have a working play button AND the ability to make other buttons do other things!
+I'll make the other buttons at a later date. I'm done for today.
+

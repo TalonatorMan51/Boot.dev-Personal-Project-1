@@ -1,6 +1,7 @@
 import pygame, math
 from enum import Enum
 from settings import *
+from collections.abc import Callable
 
 
 class ClickType(Enum):
@@ -99,3 +100,46 @@ class PureNode(Node):
         screen.blit(text_surf2, text_rect2)
         screen.blit(text_surf3, text_rect3)
 
+class Button(Clickable):
+    def __init__(self, name: str, x: float, y: float, color, hover_color, effect: Callable, length: float = 100, width: float = 400, 
+                 type = ClickType.MENU):
+        super().__init__(x, y, type)
+        self.name = name
+        self.length = length
+        self.width = width
+        
+        self.rect = pygame.Rect(self.x - (self.width/2), self.y - (self.length/2), self.width, self.length)
+
+        self.color = color
+        self.hover_color = hover_color
+        self.is_hovered = False
+
+        self.effect = effect
+
+
+    def draw(self, screen: pygame.Surface):
+        current_color = self.hover_color if self.is_hovered else self.color
+        pygame.draw.rect(screen, current_color, self.rect)
+
+        FONT = pygame.font.Font("assets/COPRGTB.TTF", 50)
+        text_surf = FONT.render(f"{self.name}", True, "black")
+        text_rect = text_surf.get_rect(center=self.position)
+        screen.blit(text_surf, text_rect)
+
+
+    def check_hover(self, mouse_pos):
+        if self.rect.collidepoint(mouse_pos):
+            self.is_hovered = True
+        else:
+            self.is_hovered = False
+        return self.is_hovered
+
+
+    def is_clicked(self, event):
+        if event.type == pygame.MOUSEBUTTONDOWN and event.button == 1:
+            return self.is_hovered
+        return False
+
+    def click(self):
+        if self.effect:
+            self.effect()
