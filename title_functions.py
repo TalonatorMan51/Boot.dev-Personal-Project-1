@@ -5,8 +5,10 @@ from button_effects import *
 
 def create_title_buttons():
     play = Button("Play", 960, 460, "#8a00f8", "#9d37f1", effect = play_button)
+    quit = Button("Quit Game", 960, 760, "#8a00f8", "#9d37f1", effect = quit_button)
+    options = Button("Options (N/A)", 960, 610, "#8a00f8", "#9d37f1", effect = options_button)
 
-    buttons = [play]
+    buttons = [play, quit, options]
     return buttons
 
 def draw_title(screen:pygame.Surface, buttons: list[Button]):

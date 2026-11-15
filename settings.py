@@ -9,6 +9,7 @@ class GameState (Enum):
 class Game:
     def __init__(self):
         self.state = GameState.TITLE
+        self.running = False
 
 game = Game()
 

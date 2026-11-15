@@ -398,3 +398,36 @@ but It won't work for implementing ANY other button. currently title screen butt
 4:11PM: Fixed! an now I have a working play button AND the ability to make other buttons do other things!
 I'll make the other buttons at a later date. I'm done for today.
 
+
+DAY 17: 11/15/26
+3:08PM: I slept in today and have a family thing soon so small goal today, quit button, and maybe options button that does nothing.
+Here we go!
+
+3:14PM Yay! that 1.5 hours I spent yesterday wasn't wasted! It was real easy to add the quit button without breaking things!
+
+3:19PM: Options button that does nothing added!
+That's all for today since I want to hang out with my family but I can put some of my ideas into words here.
+I'm not certain how many of these ideas will get implemented but I have a bunch of ideas for this project.
+ -Tutorials: I'ts not super clear what to do when opening the game right now since it just tosses you into the chart and expects you to figure it out.
+ while this could be cool, I feel like a tutorial explaining things like click = number go up, number go up by pure magic amount, pure magic go up when 
+ all numbers are big enough to go down by pure magic when clicked, need 100 in two nodes to use tier 2, would be good.
+ -Inbalance/Suppression/Domination Mechanic: A mechanic to make it so polar opposites can suppress each other might be neat, if you advance light or fire
+ too much more than dark or water, dark or water becomes harder to advance, and maybe light or fire becomes easier. this would get a little funky with
+ the more esoteric and conceptual higher tiers but it could add more depth. Or it could be annoying...
+ -Low Tier Lockout: This is already partially here, when you start advancing tier 3, tier 1 stops being reduced by pure magic, the hope is to give an
+ "ending" beyond "get every combo" meaning it's possible some people get farther than others. Tier 1 would no longer be advancable once you hit tier 3.
+ this would make it so that if you dont leave enough value in the tier 1s to get all your tier twos above 50, your prospects for advancement become more
+ limited.
+ -Discovery/Fog of War: I'm considering hiding the names, colors, and combos of higher tiers until you already meet the requirements to make them. This 
+ would add a discovery aspect to the game that could be more interesting than having all the names and combos given to you from the start.
+ -Scrolling and Zooming: this chart is gonna be too big to fit on a 1920 x 1080 space without the ability to scroll or zoom, adding this would also allow 
+ me to figure out how to add a resolution option that people can change.
+ -Sound Effects and Music: No idea what I'm gonna do here. but the project is eerily silent right now... Maybe I can commission my friend to do some music
+ if he's willing? I'd need money first...
+ -Prettify: The game is not super pretty right now, I'm not even sure I'm gonna do this one since it is my first project ever, but I also kind of want 
+ this to be something I can be extra proud of, enough that I'd willingly release it to the public.
+Well, those are the ideas and thoughts I've had bouncing around that seem feasable. there are a few others like Characters who can be "instructors" that
+change the "gamemode" and the tutorial and could even be voice acted (though ameteurly by me and my family and friends probably), or some crazy animations
+for the actions (though this could fall under prettify). But those aren't super feasable at this point... maybe in the future.
+
+

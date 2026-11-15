@@ -12,7 +12,7 @@ def main():
     dt = 0.0
     screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
     pygame.display.set_caption("Beytar Magic Academy")
-    running = True
+    game.running = True
 
     title_menu = create_title_buttons()
     
@@ -25,7 +25,7 @@ def main():
 
 
 
-    while running and game.state == GameState.TITLE:
+    while game.running and game.state == GameState.TITLE:
         mouse_pos = pygame.mouse.get_pos()
 
         for button in title_menu:
@@ -33,7 +33,7 @@ def main():
 
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
-                running = False
+                game.running = False
             for button in title_menu:
                 if button.is_clicked(event):
                     button.click()
@@ -46,7 +46,7 @@ def main():
         pygame.display.flip()
 
 
-    while running and game.state == GameState.GAME:
+    while game.running and game.state == GameState.GAME:
         mouse_pos = pygame.mouse.get_pos()
         
         for node in nodes:
@@ -83,7 +83,7 @@ def main():
         #The actual actions players can take.
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
-                running = False
+                game.running = False
             for node in nodes:
                 if node.is_clicked(event):
                     if node.type == ClickType.NODE:

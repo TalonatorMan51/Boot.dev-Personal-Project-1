@@ -2,6 +2,7 @@ import pygame, math
 from enum import Enum
 from settings import *
 from collections.abc import Callable
+from button_effects import empty_button
 
 
 class ClickType(Enum):
@@ -101,7 +102,7 @@ class PureNode(Node):
         screen.blit(text_surf3, text_rect3)
 
 class Button(Clickable):
-    def __init__(self, name: str, x: float, y: float, color, hover_color, effect: Callable, length: float = 100, width: float = 400, 
+    def __init__(self, name: str, x: float, y: float, color, hover_color, effect: Callable = empty_button, length: float = 100, width: float = 400, 
                  type = ClickType.MENU):
         super().__init__(x, y, type)
         self.name = name
