@@ -1,3 +1,4 @@
+import pygame
 from enum import Enum
 
 #Background classes to keep track of things
@@ -10,8 +11,10 @@ class Game:
     def __init__(self):
         self.state = GameState.TITLE
         self.running = False
+        self.sounds = {}
 
 game = Game()
+
 
 # BACKGROUND CONSTANTS
 BASE_UNLOCK = 100 #100 unless testing

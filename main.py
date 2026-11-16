@@ -4,14 +4,14 @@ from clickables import *
 from nodes import *
 from title_functions import *
 from button_effects import *
-
+from initialize import *
 
 def main():
-    pygame.init()
+    initialize()
     clock = pygame.time.Clock()
     dt = 0.0
     screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
-    pygame.display.set_caption("Beytar Magic Academy")
+    pygame.display.set_caption(f"{TITLE}")
     game.running = True
 
     title_menu = create_title_buttons()
@@ -21,7 +21,6 @@ def main():
     PURE_FLASH = False
     flash_dur = 500
     flash_start = 0
-
 
 
 
