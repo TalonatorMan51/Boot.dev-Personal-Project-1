@@ -16,8 +16,12 @@ class Clickable(pygame.sprite.Sprite):
         super().__init__()
         self.x = x
         self.y = y
-        self.position = pygame.Vector2(x, y)
+        self.position = pygame.Vector2(self.x, self.y)
         self.type = type
+
+        #Use these for a reset camera button or something
+        self.origin_x = x
+        self.origin_y = y
 
     def draw(self, screen: pygame.Surface):
         pass
@@ -25,6 +29,21 @@ class Clickable(pygame.sprite.Sprite):
     def is_clicked(self):
         pass
 
+    def update(self) -> None:
+        keys = pygame.key.get_pressed()
+
+        if keys[pygame.K_a]:
+            self.x += 2.5
+            self.position = pygame.Vector2(self.x, self.y)
+        if keys[pygame.K_d]:
+            self.x -= 2.5
+            self.position = pygame.Vector2(self.x, self.y)
+        if keys[pygame.K_w]:
+            self.y += 2.5
+            self.position = pygame.Vector2(self.x, self.y)
+        if keys[pygame.K_s]:
+            self.y -= 2.5
+            self.position = pygame.Vector2(self.x, self.y)
 
 class Node(Clickable):
     def __init__(self, name: str, x: float, y: float, color, hover_color, value = 1, tier: int = 1, radius = 50, 

@@ -430,4 +430,28 @@ Well, those are the ideas and thoughts I've had bouncing around that seem feasab
 change the "gamemode" and the tutorial and could even be voice acted (though ameteurly by me and my family and friends probably), or some crazy animations
 for the actions (though this could fall under prettify). But those aren't super feasable at this point... maybe in the future.
 
-7:05PM: At my brother request, Options now laughs at me.
+7:05PM: At my brother's request, Options now laughs at me.
+
+
+DAY 17: 11/16/26
+1:01PM: So now I have to decide what to do.
+Do I find a sound effect I can freely use and add some sounds to the buttons?
+Do I start making a Tutorial?
+Maybe I start making it so the options doesn't JUST laugh at you.
+Or Scrolling. That one's important...
+Hmmmmmm.... 
+I made a poll in my discord with my friends, no context just "QUICK CHOOSE!"
+the options were "Hear with Sound", "Learn with Book", "Fix with Wrench", and "Move with Leg". I don't think anyone will catch on to what these mean,
+but they'll answer XD.
+
+1:10PM: Didn't run the poll too long, move with leg won so... Guess we gonna figure out how the fuck to make this scrollable.
+Hoo boy...
+
+1:24PM: Hmm, well WASD now scrolls the screen, not super fast but it does...
+Not sure if the way I did it is the best though since it moves the nodes themselves and not the "camera" but I can't think of any problems this would
+cause at the moment.
+I also added new origin_x and origin_y things to clickables so if things get moved around we can reset to the defaults. (maybe I'll add a reset button
+or have it reset on save/load once I have saves added)
+That wasn't quite as hard as I expected...
+So that's nice!
+

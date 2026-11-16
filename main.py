@@ -95,6 +95,9 @@ def main():
                             PURE_FLASH = True
                             flash_start = pygame.time.get_ticks()
 
+        for node in nodes:
+            node.update()
+
          
         screen.fill("#22211F")
 
