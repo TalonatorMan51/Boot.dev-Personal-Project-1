@@ -455,3 +455,14 @@ or have it reset on save/load once I have saves added)
 That wasn't quite as hard as I expected...
 So that's nice!
 
+
+DAY 18: 11/17/26
+2:19 PM: Settings scren. That's the plan.
+It'll probably be it's own screen and not a pop up thing (just cause that's easier) so it'll be a new GameState.
+Here we go!
+
+4:32PM: an hour and a half ago I made the option menu work, it just had no options.
+I decided I'd give it another half hour and try to let us change resolution.
+That was so much harder than I expected. I need to adjust some button sizes and placements to be based on the resolution, but all menu buttons work
+fine in both currently supported resolutions of 1920x1080 and 1280x720 (except quit which hides during 1280x720 but I'll fix that later)
+I'm done for today. glad I have this added, gonna fix the issues it causes later. :P
