@@ -466,3 +466,12 @@ I decided I'd give it another half hour and try to let us change resolution.
 That was so much harder than I expected. I need to adjust some button sizes and placements to be based on the resolution, but all menu buttons work
 fine in both currently supported resolutions of 1920x1080 and 1280x720 (except quit which hides during 1280x720 but I'll fix that later)
 I'm done for today. glad I have this added, gonna fix the issues it causes later. :P
+
+
+DAY19: 11/18/26
+1:15PM: Yesterday I left a few issues and the program has some redundant code as well. So! I'm gonna fix the redundant code and make a few adjustments
+so resolution changes don't lock you out of certain buttons.
+
+1:51PM: Alright cleaned up the code so it should be reasonably fast and able to not overuse resources or anything, the state is handled by functions 
+instead of multiple while loops doing a lot of the same stuff.
+That took longer than I'd hoped so that's all for today, I have things to do today. :P
