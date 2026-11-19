@@ -475,3 +475,29 @@ so resolution changes don't lock you out of certain buttons.
 1:51PM: Alright cleaned up the code so it should be reasonably fast and able to not overuse resources or anything, the state is handled by functions 
 instead of multiple while loops doing a lot of the same stuff.
 That took longer than I'd hoped so that's all for today, I have things to do today. :P
+
+
+DAY 20: 11/19/26
+1:08PM: Wow, twenty days is wild. Feels like more.
+Anyway, If yesterday was cleaning day, today is math day. Ugh.
+Gotta do a bunch of math to translate the currently set sizes of the buttons, to adjust with the resolution, so lets get to it.
+
+1:35PM: YES! I made the coordinates, and sizes of the options menu change with the resolution! Now I just need to apply it do the Title menu.
+
+1:45PM: Applied to the Title menu as well!
+Just realized I haven't done anything with my resolutions option menu...
+
+1:50PM: And now all of them are resizing! Let's add some other resolutions now.
+
+2:13PM: The game now supports the following resolutions:
+    4x3 (1280x960)
+    HD (1280x720) 
+    Full HD (1920x1080) 
+    16x10 (1920x1200) 
+    Ultrawide (2560x1080) 
+    2K (2560x1440) 
+    2K 16x10 (2560x1600) 
+    4K Ultrawide (3840x1440) 
+    4K (3840x2160)
+All accessible and working in a working menu! 
+Not a lot of thoughts and explanations in recent entries here since their fairly simple or in this case, just goddamn math. (hooray for calculators)
