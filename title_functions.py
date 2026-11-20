@@ -6,7 +6,7 @@ from button_effects import *
 def create_title_buttons():
     play = Button("Play", (game.SCREEN_WIDTH // 2), (game.SCREEN_HEIGHT / 2.34), "#8a00f8", "#9d37f1", effect = play_button, height = game.opt_height, 
                   width = game.tit_width, font_size = game.opt_font_size)
-    options = Button("Options (N/A)", (game.SCREEN_WIDTH // 2), play.y + (game.SCREEN_HEIGHT / 7.2), "#8a00f8", "#9d37f1", effect = options_button, height = game.opt_height, 
+    options = Button("Options", (game.SCREEN_WIDTH // 2), play.y + (game.SCREEN_HEIGHT / 7.2), "#8a00f8", "#9d37f1", effect = options_button, height = game.opt_height, 
                   width = game.tit_width, font_size = game.opt_font_size)
     quit = Button("Quit Game", (game.SCREEN_WIDTH // 2), options.y + (game.SCREEN_HEIGHT / 7.2), "#8a00f8", "#9d37f1", effect = quit_button, height = game.opt_height, 
                   width = game.tit_width, font_size = game.opt_font_size)

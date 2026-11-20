@@ -122,7 +122,7 @@ class PureNode(Node):
 
 class Button(Clickable):
     def __init__(self, name: str, x: float, y: float, color, hover_color, effect: Callable = empty_button, height: float = 100, width: float = 400, 
-                 type = ClickType.MENU, font_size = 50):
+                 type = ClickType.MENU, font_size = 50, font_file = "assets/COPRGTB.TTF"):
         super().__init__(x, y, type)
         self.name = name
         self.height = height
@@ -133,6 +133,7 @@ class Button(Clickable):
         self.color = color
         self.hover_color = hover_color
         self.is_hovered = False
+        self.font_file = font_file
 
         self.effect = effect
 
@@ -141,7 +142,7 @@ class Button(Clickable):
         current_color = self.hover_color if self.is_hovered else self.color
         pygame.draw.rect(screen, current_color, self.rect)
 
-        FONT = pygame.font.Font("assets/COPRGTB.TTF", self.font_size)
+        FONT = pygame.font.Font(self.font_file, self.font_size)
         text_surf = FONT.render(f"{self.name}", True, "black")
         text_rect = text_surf.get_rect(center=self.position)
         screen.blit(text_surf, text_rect)

@@ -501,3 +501,10 @@ Just realized I haven't done anything with my resolutions option menu...
     4K (3840x2160)
 All accessible and working in a working menu! 
 Not a lot of thoughts and explanations in recent entries here since their fairly simple or in this case, just goddamn math. (hooray for calculators)
+
+
+DAY 21: 11/20/26
+1:34PM: Todays plan is simple (hopefully). We are gonna add options menu access to the "game" state along with a quit game button.
+
+1:57PM: There we go! options menu accessible from the game itself (thank you past me for thinking ahead with the options menu), and a quit game button
+added within

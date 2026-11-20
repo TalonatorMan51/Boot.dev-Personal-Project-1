@@ -10,8 +10,10 @@ def create_options():
                         effect = res_button, height = game.opt_height, width = game.opt_width, font_size = game.opt_font_size)
     back = Button("Back", (game.SCREEN_WIDTH / 2), resolution.y + (game.SCREEN_HEIGHT / 7.2), "#674ae9", "#5d4da3", effect = back_button, 
                   height = game.opt_height, width = game.opt_width, font_size = game.opt_font_size)
+    quit_game = Button("Quit", 200, (game.SCREEN_HEIGHT - 100), "#674ae9", "#5d4da3", effect = quit_button, 
+                       height = game.opt_height, width = (game.opt_width / 2), font_size = game.opt_font_size)
 
-    buttons = [back, resolution]
+    buttons = [back, resolution, quit_game]
     return buttons
 
 def draw_options(screen: pygame.Surface, buttons: list[Button]):

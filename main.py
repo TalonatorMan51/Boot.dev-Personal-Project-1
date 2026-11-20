@@ -19,6 +19,8 @@ def main():
     options_menu = create_options()
     resolution_select = create_res()
     nodes = create_nodes()
+    settings = Button("@", 50, 50, "#8a00f8", "#9d37f1", effect = options_button, 
+                     height = 30, width = 30, font_size = 25, font_file = "assets/webdings.ttf")
 
 
 
@@ -53,7 +55,7 @@ def main():
         elif game.state == GameState.OPTIONS:
             handle_options(screen, events, mouse_pos, options_menu, resolution_select)
         elif game.state == GameState.GAME:
-            handle_game(screen, events, mouse_pos, nodes)
+            handle_game(screen, events, mouse_pos, nodes, settings)
 
         #Display and dt (which is unused right now)
         dt = clock.tick(60) / 1000
@@ -98,7 +100,7 @@ def handle_options(screen, events, mouse_pos, options_menu, resolution_select):
         draw_options(screen, resolution_select)
 
 
-def handle_game(screen, events, mouse_pos, nodes):    
+def handle_game(screen, events, mouse_pos, nodes, settings):    
     pure_node = nodes[0]
     PURE_FLASH = False
     flash_dur = 500
@@ -106,6 +108,7 @@ def handle_game(screen, events, mouse_pos, nodes):
 
     for node in nodes:
         node.check_hover(mouse_pos)
+    settings.check_hover(mouse_pos)
 
     active_nodes: list[Node] = []
     pure_nodes: list[Node] = []
@@ -153,11 +156,14 @@ def handle_game(screen, events, mouse_pos, nodes):
                         pure_node.color = "#df0829"
                         PURE_FLASH = True
                         flash_start = pygame.time.get_ticks()
+        if settings.is_clicked(event):
+            settings.click()
 
     for node in nodes:
         node.update()
 
     draw_nodes(nodes, screen)
+    settings.draw(screen)
 
 if __name__ == "__main__":
     main()
