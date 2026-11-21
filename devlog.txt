@@ -508,3 +508,10 @@ DAY 21: 11/20/26
 
 1:57PM: There we go! options menu accessible from the game itself (thank you past me for thinking ahead with the options menu), and a quit game button
 added within
+
+
+DAY 20: 11/21/26
+2:35PM: Today might be a design day, I do have more mechanical things and features I could add, but I think i need a day or two where instead of coding
+I'm thinking of further combos and elements.
+
+3:21PM: Gonna need to work out a few things but I have some mostly reasonable T3 nodes now.
