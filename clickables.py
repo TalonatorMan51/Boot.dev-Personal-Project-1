@@ -62,17 +62,27 @@ class Node(Clickable):
 
     def draw(self, screen: pygame.Surface):
         current_color = self.hover_color if self.is_hovered else self.color
-        pygame.draw.circle(screen, current_color, self.position, self.radius)
 
-        FONT = pygame.font.Font("assets/COPRGTB.TTF", 18)
-        text_surf = FONT.render(f"{self.name}:{self.value}", True, "black")
-        text_rect = text_surf.get_rect(center=self.position)
-        screen.blit(text_surf, text_rect)
+        if self.is_unlocked or self.value > 1:
+            pygame.draw.circle(screen, current_color, self.position, self.radius)
+
+            FONT = pygame.font.Font("assets/COPRGTB.TTF", 18)
+            text_surf = FONT.render(f"{self.name}:{self.value}", True, "black")
+            text_rect = text_surf.get_rect(center=self.position)
+            screen.blit(text_surf, text_rect)
+        else:
+            pygame.draw.circle(screen, "black", self.position, self.radius)
+
+            FONT = pygame.font.Font("assets/COPRGTB.TTF", 36)
+            text_surf = FONT.render("?", True, "white")
+            text_rect = text_surf.get_rect(center=self.position)
+            screen.blit(text_surf, text_rect)
 
     def draw_lines(self, screen: pygame.Surface):
         #variable for having always visible lines, if final version does not have it, it will be removed.
         line_current = LINE_HOVER_COLOR if self.is_hovered else LINE_COLOR
-        if self.is_hovered:
+
+        if self.is_hovered and (self.is_unlocked or self.value > 1):
             for parent in self.parents:
                 pygame.draw.line(screen, LINE_HOVER_COLOR, (self.x, (self.y + self.radius - 3)), (parent.x, (parent.y - parent.radius + 3)), width = 3)
 

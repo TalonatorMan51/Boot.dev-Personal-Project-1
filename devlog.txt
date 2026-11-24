@@ -519,3 +519,12 @@ I'm thinking of further combos and elements.
 
 11/22/26 is gonna be a break day.
 I'm not gonna do this often but I need a second day off I think. - 11/23/26
+
+
+DAY 21: 11/24/26
+2:03PM: Alright, taking a few days off makes me think I'm ready to start on the "discovery aspect" as I've been calling it mentally.
+I think it's gonna be mostly changes in the draw function of the nodes... I'll have to give it a boolean or @property to manage as well probably.
+No way to be sure exept by doing!
+
+2:15PM: Didn't take long to implement a basic form of this. But I'm gonna want to update it a bit so it doesn't auto-reveal until you click on it.
+but I have things to do so I'll work that out tomorrow.
