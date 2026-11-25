@@ -528,3 +528,22 @@ No way to be sure exept by doing!
 
 2:15PM: Didn't take long to implement a basic form of this. But I'm gonna want to update it a bit so it doesn't auto-reveal until you click on it.
 but I have things to do so I'll work that out tomorrow.
+
+
+DAY 22: 11/25/26
+2:53PM: Today's plan are adjustments to the discovery aspect. Currently it makes it so that the nodes above tier 1 start black with a question mark.
+They then unlock as soon as you meet the requirements which reveals them and, when hovered, how to make them.
+There are a few things I don't like about this version of it.
+It instantly reveals, I think it would be better if it instead highlighted the node as unlocked, but doesn't reveal until clicked.
+This would also solve my other main issue which is that multiple can get revealed, but then hide again as soon as one is picked.
+So. Here we go!
+
+3:13PM: I did it, but somehow broke pure node flashing red? How I did that, I'm not sure. Guess I'm fixing it now?
+
+3:19PM: I think pure node's flashing has been broken for a while, probably since I moved it's handling into a function.
+I might be able to fix this without too much issues then? Hopefully...
+
+3:22PM: Thank god it was easy.
+I just moved a bunch of the variables that handle pure node's flashing from the function (where they wer continuously reset to their start when it 
+got called every tick) to the game object.
+That's all for today then, might not do much other than a devlog update tomorrow, depends on how much time I have. But it's thanksgiving so we'll see.

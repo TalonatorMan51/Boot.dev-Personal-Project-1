@@ -19,6 +19,11 @@ class Game:
         self.screen = pygame.display.set_mode((self.SCREEN_WIDTH, self.SCREEN_HEIGHT))
         self.pending_resolution = None
 
+        #Pure node flash handling
+        self.PURE_FLASH = False
+        self.flash_dur = 500
+        self.flash_start = 0
+
         #Title Screen
         self.tit_width = 400 #Width of Title Screen buttons
 

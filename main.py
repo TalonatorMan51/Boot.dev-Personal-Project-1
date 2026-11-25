@@ -102,9 +102,7 @@ def handle_options(screen, events, mouse_pos, options_menu, resolution_select):
 
 def handle_game(screen, events, mouse_pos, nodes, settings):    
     pure_node = nodes[0]
-    PURE_FLASH = False
-    flash_dur = 500
-    flash_start = 0
+
 
     for node in nodes:
         node.check_hover(mouse_pos)
@@ -136,12 +134,12 @@ def handle_game(screen, events, mouse_pos, nodes, settings):
             pure_nodes.append(active)
 
     #Pure node flashes red if insufficient mana of all needed types
-    if PURE_FLASH:
+    if game.PURE_FLASH:
         current_time = pygame.time.get_ticks()
-        if current_time - flash_start >= flash_dur:
+        if current_time - game.flash_start >= game.flash_dur:
             pure_node.hover_color = "#9d37f1"
             pure_node.color = "#8a00f8"
-            PURE_FLASH = False
+            game.PURE_FLASH = False
 
     #The actual actions players can take.
     for event in events:
@@ -154,8 +152,8 @@ def handle_game(screen, events, mouse_pos, nodes, settings):
                     if flash == 1:
                         pure_node.hover_color = "#bb293f"
                         pure_node.color = "#df0829"
-                        PURE_FLASH = True
-                        flash_start = pygame.time.get_ticks()
+                        game.PURE_FLASH = True
+                        game.flash_start = pygame.time.get_ticks()
         if settings.is_clicked(event):
             settings.click()
 
