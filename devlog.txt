@@ -547,3 +547,6 @@ I might be able to fix this without too much issues then? Hopefully...
 I just moved a bunch of the variables that handle pure node's flashing from the function (where they wer continuously reset to their start when it 
 got called every tick) to the game object.
 That's all for today then, might not do much other than a devlog update tomorrow, depends on how much time I have. But it's thanksgiving so we'll see.
+
+
+No thanksgiving work today.
